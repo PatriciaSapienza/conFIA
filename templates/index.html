@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConfIA | Confía Process</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <svg
+        class="logo"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Confía Process"
+      >
+        <title>Confía Process</title>
+        <!-- Isotipo: "C" de Confía, abierta a la derecha -->
+        <path
+          d="M79.1,74.4 A38,38 0 1 1 79.1,25.6"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="11"
+          stroke-linecap="round"
+        />
+        <!-- Nodos internos: flujo de un proceso validado por IA -->
+        <g fill="#5BB8F5" stroke="#003A70" stroke-width="1.5">
+          <line x1="32" y1="35" x2="50" y2="24" stroke="#5BB8F5" stroke-width="3" />
+          <line x1="50" y1="24" x2="68" y2="35" stroke="#5BB8F5" stroke-width="3" />
+          <line x1="50" y1="24" x2="50" y2="40" stroke="#5BB8F5" stroke-width="3" />
+          <circle cx="32" cy="35" r="4" />
+          <circle cx="68" cy="35" r="4" />
+          <circle cx="50" cy="24" r="4.5" />
+          <circle cx="50" cy="40" r="4" />
+        </g>
+        <!-- "IA" destacado en celeste -->
+        <text
+          x="50"
+          y="70"
+          text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-weight="700"
+          font-size="26"
+          fill="#5BB8F5"
+        >IA</text>
+      </svg>
+      <div>
+        <h1>ConfIA</h1>
+        <p>por Confía Process</p>
+      </div>
+    </header>
+
+    <main class="chat-window" id="chat-window">
+      <!-- Los mensajes se agregan acá dinámicamente -->
+    </main>
+
+    <div class="typing-indicator" id="typing-indicator" hidden>
+      <span></span><span></span><span></span>
+    </div>
+
+    <form class="chat-form" id="chat-form">
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="Escribí tu mensaje..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="send-btn">Enviar</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>

@@ -20,7 +20,7 @@ else:
 
 client = Groq(api_key=_groq_api_key)
 
-MODEL = "llama-3.1-8b-instant"
+MODEL = "openai/gpt-oss-20b"
 MAX_TOKENS = 1024
 RETRY_WAIT_SECONDS = 20
 
